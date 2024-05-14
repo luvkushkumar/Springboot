@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Result Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 10px;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deposit Result Details</h1>
+    <p>Previous balance: <span th:text="${account.amount - present}"></span></p>
+    <p>The amount to be deposited into the account is: <span th:text="${present}"></span></p>
+    <p>Total balance after deposit in account is: <span th:text="${account.amount}"></span></p>
+    <a href="/">Home Page</a>
+</body>
+</html>

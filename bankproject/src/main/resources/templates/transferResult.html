@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgreen;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Transfer Details</h1>
+        <p>My Account Number is: <span th:text="${amount.Account_no}"></span></p>
+        <p>My Account Balance is: <span th:text="${amount.amount}"></span></p>
+        <p>Transfer Amount is: <span th:text="${a}"></span></p>
+        <p>Target Account Number is: <span th:text="${acc1.Account_no}"></span></p>
+        <p>Target Account Balance before Transfer is: <span th:text="${acc1.amount - a}"></span></p>
+        <p>After Transfer, Target Account Balance is: <span th:text="${acc1.amount}"></span></p>
+    </div>
+</body>
+</html>
